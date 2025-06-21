@@ -6,10 +6,10 @@ import Footer from '../components/Footer/Footer';
 const RootLayout = () => {
     return (
         <div>
-            <header>
+            <header className='sticky top-0 z-50'>
                 <Navbar></Navbar>
             </header>
-            <main>
+            <main className='bg-[#EAECED] py-1'>
                 <Outlet></Outlet>
             </main>
             <footer>
