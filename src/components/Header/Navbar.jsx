@@ -32,7 +32,7 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link className="btn hover:bg-secondary hover:text-white mr-2">SignIn</Link>
+                    <Link to={'/auth/signin'} className="btn hover:bg-secondary hover:text-white mr-2">SignIn</Link>
                     <Link className="btn bg-primary hover:bg-secondary text-white">Be a Rider</Link>
                 </div>
             </div>
