@@ -1,45 +1,64 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import signInAnimation from '../../../assets/lotties/signin-animation.json';
 import Logo from '../../../components/Logo';
 import Lottie from 'lottie-react';
 import PasswordInput from '../components/PasswordInput';
-import { Link } from 'react-router';
+import { Link, useLocation, useNavigate } from 'react-router';
 import SignInWithGoogle from '../components/SignInWithGoogle';
+import useDocumentTitle from '../../../hooks/useDocumentTitle';
+import { AuthContext } from '../../../contexts/AuthContext/AuthContext';
+import Swal from 'sweetalert2';
 
 const SignIn = () => {
-    const { register, handleSubmit, formState: { errors }, setError, clearErrors } = useForm();
+
+    useDocumentTitle("HurayraXpress | SignIn");
+
+    const {signInUser} = useContext(AuthContext);
+
+    const { register, handleSubmit, formState: { errors }, clearErrors } = useForm();
+
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const onSubmit = async (data) => {
         clearErrors();
-        try {
-            console.log(data)
-        } catch (error) {
+
+        signInUser(data.email, data.password)
+        .then(() => {
+            navigate(`${location.state ? location.state : '/'}`);
+            Swal.fire({
+                icon: "success",
+                title: "Welcome! You’ve logged in successfully.",
+                showConfirmButton: false,
+                timer: 1500
+            });
+        })
+        .catch((error) => {
             const errorCode = error.code;
 
+            let message = "Login failed. Please try again.";
+
             if (errorCode === 'auth/user-not-found') {
-                setError('email', {
-                    type: 'manual',
-                    message: 'No account found with this email.',
-                });
+                message = 'No account found with this email.';
             } else if (errorCode === 'auth/wrong-password') {
-                setError('password', {
-                    type: 'manual',
-                    message: 'Incorrect password.',
-                });
+                message = 'Incorrect password.';
             } else if (errorCode === 'auth/too-many-requests') {
-                setError('email', {
-                    type: 'manual',
-                    message: 'Too many failed attempts. Please try again later.',
-                });
-            } else {
-                setError('email', {
-                    type: 'manual',
-                    message: 'Login failed. Please try again.',
-                });
+                message = 'Too many failed attempts. Please try again later.';
             }
-        }
+
+            Swal.fire({
+                icon: "error",
+                title: message,
+                confirmButtonText: "OK",
+                confirmButtonColor: "#d33"
+            });
+        })
     };
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
 
     return (
         <div className="hero bg-base-200 min-h-screen py-10">

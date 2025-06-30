@@ -1,19 +1,64 @@
-import React from 'react';
-import { Link } from 'react-router';
+import React, { useContext, useEffect } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router';
 import Lottie from 'lottie-react';
 import signUpAnimation from '../../../assets/lotties/signup-animation.json';
 import PasswordInput from '../components/PasswordInput';
 import { useForm } from 'react-hook-form';
 import Logo from '../../../components/Logo';
 import SignInWithGoogle from '../components/SignInWithGoogle';
+import { AuthContext } from '../../../contexts/AuthContext/AuthContext';
+import Swal from 'sweetalert2';
+import useDocumentTitle from '../../../hooks/useDocumentTitle';
 
 const SignUp = () => {
 
+    useDocumentTitle("HurayraXpress | SignUp");
+
+    const {signUpUser, updateUserProfile} = useContext(AuthContext);
+
     const {register, handleSubmit, formState: {errors}} = useForm();
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
     const onSubmit = (data) => {
-        console.log(data);
+        signUpUser(data.email, data.password)
+        .then(() => {
+            updateUserProfile({displayName: data.name, photoURL: data.photo})
+            .then(() => {
+                navigate(`${location.state ? location.state : '/'}`);
+                Swal.fire({
+                    icon: "success",
+                    title: "Your account has been created successfully!",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+            })
+            .catch(() => {
+                Swal.fire({
+                    title: "Failed to create account. Please try again!",
+                    icon: "error",
+                    draggable: true
+                });
+            })
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            let message = "Something went wrong. Please try again.";
+            if (errorCode === "auth/email-already-in-use") {
+            message = "This email is already registered!";
+            }
+            Swal.fire({
+            title: message,
+            icon: "error",
+            draggable: true
+            });
+        })
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    },[])
 
     return (
          <div className="hero bg-base-200 min-h-screen py-10">
@@ -37,9 +82,9 @@ const SignUp = () => {
                                 }
 
                                 <label className="label">Photo URL</label>
-                                <input type="url" {...register('url', {required: true})} className="input" placeholder="Enter your photo url" />
+                                <input type="url" {...register('photo', {required: true})} className="input" placeholder="Enter your photo url" />
                                 {
-                                    errors.url?.type === 'required' && <p className='text-red-500 font-semibold'>Photo url is required</p>
+                                    errors.photo?.type === 'required' && <p className='text-red-500 font-semibold'>Photo url is required</p>
                                 }
 
                                 <label className="label">Email</label>

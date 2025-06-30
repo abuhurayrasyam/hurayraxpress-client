@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router';
 import Logo from '../Logo';
+import { AuthContext } from '../../contexts/AuthContext/AuthContext';
+import SignOut from '../../features/auth/components/SignOut';
 
 const Navbar = () => {
+
+    const {user} = useContext(AuthContext);
 
     const navLinks = (
         <>
@@ -24,7 +28,7 @@ const Navbar = () => {
                         {navLinks}
                     </ul>
                     </div>
-                    <a className="text-xl pb-5"><Logo></Logo></a>
+                    <h1 className="text-xl pb-5"><Logo></Logo></h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
@@ -32,8 +36,18 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to={'/auth/signin'} className="btn hover:bg-secondary hover:text-white mr-2">SignIn</Link>
-                    <Link className="btn bg-primary hover:bg-secondary text-white">Be a Rider</Link>
+                    {
+                        user ? (
+                            <>
+                                <SignOut></SignOut>
+                            </>
+                        ) : (
+                            <>
+                                <Link to={'/auth/signin'} className="btn hover:bg-secondary hover:text-white mr-2">SignIn</Link>
+                                <Link className="btn bg-primary hover:bg-secondary text-white">Be a Rider</Link>
+                            </>
+                        )
+                    }
                 </div>
             </div>
         </div>
