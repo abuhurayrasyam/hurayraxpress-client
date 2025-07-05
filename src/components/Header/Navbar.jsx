@@ -11,6 +11,7 @@ const Navbar = () => {
     const navLinks = (
         <>
             <NavLink to={'/'} className={'m-2 cursor-pointer text-[18px] text-secondary hover:text-accent font-bold'}>Home</NavLink>
+            <NavLink to={'/coverage'} className={'m-2 cursor-pointer text-[18px] text-secondary hover:text-accent font-bold'}>Coverage</NavLink>
         </>
     )
 

@@ -6,7 +6,7 @@ import Footer from '../components/Footer/Footer';
 const RootLayout = () => {
     return (
         <div>
-            <header className='sticky top-0 z-50'>
+            <header className='sticky top-0 z-[9999]'>
                 <Navbar></Navbar>
             </header>
             <main className='bg-[#EAECED] py-1'>

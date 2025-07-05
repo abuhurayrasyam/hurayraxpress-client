@@ -7,6 +7,7 @@ import SignUp from "../features/auth/pages/SignUp";
 import SignIn from "../features/auth/pages/SignIn";
 import ForgotPassword from "../features/auth/pages/ForgotPassword";
 import ResetPassword from "../features/auth/pages/ResetPassword";
+import Coverage from "../features/coverage/pages/Coverage";
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ export const router = createBrowserRouter([
             index: true,
             path: "/",
             Component: Home
+        },
+        {
+          path: "/coverage",
+          loader: () => fetch('./serviceCenter.json'),
+          Component: Coverage
         }
     ]
   },

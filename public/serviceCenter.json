@@ -1,0 +1,1197 @@
+[
+  {
+    "region": "Dhaka",
+    "district": "Dhaka",
+    "city": "Dhaka",
+    "covered_area": [
+      "Dhamrai",
+      "Dohar",
+      "Keraniganj",
+      "Nawabganj",
+      "Savar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/dhaka-flowchart.png",
+    "longitude": 90.3563,
+    "latitude": 23.7745
+  },
+  {
+    "region": "Dhaka",
+    "district": "Faridpur",
+    "city": "Faridpur",
+    "covered_area": [
+      "Alfadanga",
+      "Bhanga",
+      "Boalmari",
+      "Charbhadrasan",
+      "Faridpur Sadar",
+      "Madhukhali",
+      "Nagarkanda",
+      "Sadarpur",
+      "Saltha"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/faridpur-flowchart.png",
+    "longitude": 89.8415,
+    "latitude": 23.6067
+  },
+  {
+    "region": "Dhaka",
+    "district": "Gazipur",
+    "city": "Gazipur",
+    "covered_area": [
+      "Gazipur Sadar",
+      "Kaliakair",
+      "Kaliganj",
+      "Kapasia",
+      "Sreepur"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/gazipur-flowchart.png",
+    "longitude": 90.4190,
+    "latitude": 24.0023
+  },
+  {
+    "region": "Dhaka",
+    "district": "Gopalganj",
+    "city": "Gopalganj",
+    "covered_area": [
+      "Gopalganj Sadar",
+      "Kashiani",
+      "Kotalipara",
+      "Muksudpur",
+      "Tungipara"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/gopalganj-flowchart.png",
+    "longitude": 89.9678,
+    "latitude": 23.0033
+  },
+  {
+    "region": "Dhaka",
+    "district": "Kishoreganj",
+    "city": "Kishoreganj",
+    "covered_area": [
+      "Austagram",
+      "Bajitpur",
+      "Bhairab",
+      "Hossainpur",
+      "Itna",
+      "Karimganj",
+      "Katiadi",
+      "Kishoreganj Sadar",
+      "Kuliarchar",
+      "Mithamain",
+      "Nikli",
+      "Pakundia",
+      "Tarail"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/kishoreganj-flowchart.png",
+    "longitude": 90.7723,
+    "latitude": 24.4035
+  },
+  {
+    "region": "Dhaka",
+    "district": "Madaripur",
+    "city": "Madaripur",
+    "covered_area": [
+      "Kalkini",
+      "Madaripur Sadar",
+      "Rajoir",
+      "Shibchar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/madaripur-flowchart.png",
+    "longitude": 90.2081,
+    "latitude": 23.1643
+  },
+  {
+    "region": "Dhaka",
+    "district": "Manikganj",
+    "city": "Manikganj",
+    "covered_area": [
+      "Daulatpur",
+      "Ghior",
+      "Harirampur",
+      "Manikganj Sadar",
+      "Saturia",
+      "Shibalaya",
+      "Singair"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/manikganj-flowchart.png",
+    "longitude": 90.0003,
+    "latitude": 23.8617
+  },
+  {
+    "region": "Dhaka",
+    "district": "Munshiganj",
+    "city": "Munshiganj",
+    "covered_area": [
+      "Gazaria",
+      "Lauhajang",
+      "Munshiganj Sadar",
+      "Sirajdikhan",
+      "Sreenagar",
+      "Tongibari"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/munshiganj-flowchart.png",
+    "longitude": 90.4126,
+    "latitude": 23.4981
+  },
+  {
+    "region": "Dhaka",
+    "district": "Narayanganj",
+    "city": "Narayanganj",
+    "covered_area": [
+      "Araihazar",
+      "Bandar",
+      "Narayanganj Sadar",
+      "Rupganj",
+      "Sonargaon"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/narayanganj-flowchart.png",
+    "longitude": 90.4998,
+    "latitude": 23.6226
+  },
+  {
+    "region": "Dhaka",
+    "district": "Narsingdi",
+    "city": "Narsingdi",
+    "covered_area": [
+      "Belabo",
+      "Monohardi",
+      "Narsingdi Sadar",
+      "Palash",
+      "Raipura",
+      "Shibpur"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/narsingdi-flowchart.png",
+    "longitude": 90.7860,
+    "latitude": 24.1344
+  },
+  {
+    "region": "Dhaka",
+    "district": "Rajbari",
+    "city": "Rajbari",
+    "covered_area": [
+      "Baliakandi",
+      "Goalanda",
+      "Kalukhali",
+      "Pangsha",
+      "Rajbari Sadar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/rajbari-flowchart.png",
+    "longitude": 89.5875,
+    "latitude": 23.7151
+  },
+  {
+    "region": "Dhaka",
+    "district": "Shariatpur",
+    "city": "Shariatpur",
+    "covered_area": [
+      "Bhedarganj",
+      "Damudya",
+      "Gosairhat",
+      "Naria",
+      "Shariatpur Sadar",
+      "Zajira"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/shariatpur-flowchart.png",
+    "longitude": 90.4348,
+    "latitude": 23.2423
+  },
+  {
+    "region": "Dhaka",
+    "district": "Tangail",
+    "city": "Tangail",
+    "covered_area": [
+      "Basail",
+      "Bhuapur",
+      "Delduar",
+      "Dhanbari",
+      "Ghatail",
+      "Gopalpur",
+      "Kalihati",
+      "Madhupur",
+      "Mirzapur",
+      "Nagarpur",
+      "Sakhipur",
+      "Tangail Sadar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/tangail-flowchart.png",
+    "longitude": 89.9113,
+    "latitude": 24.2450
+  },
+  {
+    "region": "Chittagong",
+    "district": "Bandarban",
+    "city": "Bandarban",
+    "covered_area": [
+      "Alikadam",
+      "Bandarban Sadar",
+      "Lama",
+      "Naikhongchhari",
+      "Rowangchhari",
+      "Ruma",
+      "Thanchi"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/bandarban-flowchart.png",
+    "longitude": 92.2154,
+    "latitude": 21.9934
+  },
+  {
+    "region": "Chittagong",
+    "district": "Brahmanbaria",
+    "city": "Brahmanbaria",
+    "covered_area": [
+      "Akhaura",
+      "Ashuganj",
+      "Bancharampur",
+      "Bijoynagar",
+      "Brahmanbaria Sadar",
+      "Kasba",
+      "Nabinagar",
+      "Nasirnagar",
+      "Sarail"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/brahmanbaria-flowchart.png",
+    "longitude": 91.1115,
+    "latitude": 23.9793
+  },
+  {
+    "region": "Chittagong",
+    "district": "Chandpur",
+    "city": "Chandpur",
+    "covered_area": [
+      "Chandpur Sadar",
+      "Faridganj",
+      "Haimchar",
+      "Haziganj",
+      "Kachua",
+      "Matlab Dakshin",
+      "Matlab Uttar",
+      "Shahrasti"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/chandpur-flowchart.png",
+    "longitude": 90.8710,
+    "latitude": 23.2325
+  },
+  {
+    "region": "Chittagong",
+    "district": "Chittagong",
+    "city": "Chittagong",
+    "covered_area": [
+      "Anwara",
+      "Banshkhali",
+      "Boalkhali",
+      "Chandanaish",
+      "Fatikchhari",
+      "Hathazari",
+      "Karnafuli",
+      "Lohagara",
+      "Mirsharai",
+      "Patiya",
+      "Rangunia",
+      "Raozan",
+      "Sandwip",
+      "Satkania",
+      "Sitakunda"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/chittagong-flowchart.png",
+    "longitude": 91.8155,
+    "latitude": 22.3419
+  },
+  {
+    "region": "Chittagong",
+    "district": "Comilla",
+    "city": "Comilla",
+    "covered_area": [
+      "Barura",
+      "Brahmanpara",
+      "Burichang",
+      "Chandina",
+      "Chauddagram",
+      "Comilla Adarsha Sadar",
+      "Comilla Sadar Dakshin",
+      "Daudkandi",
+      "Debidwar",
+      "Homna",
+      "Laksam",
+      "Lalmai",
+      "Meghna",
+      "Monoharganj",
+      "Muradnagar",
+      "Nangalkot",
+      "Titas"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/comilla-flowchart.png",
+    "longitude": 91.1818,
+    "latitude": 23.4566
+  },
+  {
+    "region": "Chittagong",
+    "district": "Cox's Bazar",
+    "city": "Cox's Bazar",
+    "covered_area": [
+      "Chakaria",
+      "Cox's Bazar Sadar",
+      "Eidgaon",
+      "Kutubdia",
+      "Maheshkhali",
+      "Pekua",
+      "Ramu",
+      "Teknaf",
+      "Ukhia"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/coxsbazar-flowchart.png",
+    "longitude": 92.0000,
+    "latitude": 21.4272
+  },
+  {
+    "region": "Chittagong",
+    "district": "Feni",
+    "city": "Feni",
+    "covered_area": [
+      "Chhagalnaiya",
+      "Daganbhuiyan",
+      "Feni Sadar",
+      "Fulgazi",
+      "Parshuram",
+      "Sonagazi"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/feni-flowchart.png",
+    "longitude": 91.4172,
+    "latitude": 23.0183
+  },
+  {
+    "region": "Chittagong",
+    "district": "Khagrachhari",
+    "city": "Khagrachhari",
+    "covered_area": [
+      "Dighinala",
+      "Khagrachhari Sadar",
+      "Laxmichhari",
+      "Mahalchhari",
+      "Manikchhari",
+      "Panchhari",
+      "Ramgarh"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/khagrachhari-flowchart.png",
+    "longitude": 91.9667,
+    "latitude": 23.0000
+  },
+  {
+    "region": "Chittagong",
+    "district": "Lakshmipur",
+    "city": "Lakshmipur",
+    "covered_area": [
+      "Chandraganj",
+      "Kamalnagar",
+      "Lakshmipur Sadar",
+      "Raipur",
+      "Ramgati"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/lakshmipur-flowchart.png",
+    "longitude": 90.8354,
+    "latitude": 22.9463
+  },
+  {
+    "region": "Chittagong",
+    "district": "Noakhali",
+    "city": "Noakhali",
+    "covered_area": [
+      "Begumganj",
+      "Chatkhil",
+      "Companyganj",
+      "Hatiya",
+      "Kabirhat",
+      "Noakhali Sadar",
+      "Senbagh",
+      "Sonaimuri",
+      "Subarnachar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/noakhali-flowchart.png",
+    "longitude": 91.1000,
+    "latitude": 22.8000
+  },
+  {
+    "region": "Chittagong",
+    "district": "Rangamati",
+    "city": "Rangamati",
+    "covered_area": [
+      "Bagaichhari",
+      "Barkal",
+      "Belaichhari",
+      "Kaptai",
+      "Juraichhari",
+      "Langadu",
+      "Naniarchar",
+      "Rajasthali",
+      "Rangamati Sadar",
+      "Kaukhali"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/rangamati-flowchart.png",
+    "longitude": 92.1963,
+    "latitude": 22.6560
+  },
+  {
+    "region": "Rajshahi",
+    "district": "Bogra",
+    "city": "Bogra",
+    "covered_area": [
+      "Adamdighi",
+      "Bogra Sadar",
+      "Dhunat",
+      "Dhupchanchia",
+      "Gabtali",
+      "Kahaloo",
+      "Nandigram",
+      "Sariakandi",
+      "Shajahanpur",
+      "Sherpur",
+      "Shibganj",
+      "Sonatala"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/bogra-flowchart.png",
+    "longitude": 89.3701,
+    "latitude": 24.8436
+  },
+  {
+    "region": "Rajshahi",
+    "district": "Joypurhat",
+    "city": "Joypurhat",
+    "covered_area": [
+      "Akkelpur",
+      "Kalai",
+      "Khetlal",
+      "Joypurhat Sadar",
+      "Panchbibi"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/joypurhat-flowchart.png",
+    "longitude": 89.0945,
+    "latitude": 25.0947
+  },
+  {
+    "region": "Rajshahi",
+    "district": "Naogaon",
+    "city": "Naogaon",
+    "covered_area": [
+      "Atrai",
+      "Badalgachhi",
+      "Dhamoirhat",
+      "Manda",
+      "Mahadevpur",
+      "Naogaon Sadar",
+      "Niamatpur",
+      "Patnitala",
+      "Porsha",
+      "Raninagar",
+      "Sapahar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/naogaon-flowchart.png",
+    "longitude": 88.7531,
+    "latitude": 24.9132
+  },
+  {
+    "region": "Rajshahi",
+    "district": "Natore",
+    "city": "Natore",
+    "covered_area": [
+      "Baraigram",
+      "Bagatipara",
+      "Gurudaspur",
+      "Lalpur",
+      "Natore Sadar",
+      "Singra"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/natore-flowchart.png",
+    "longitude": 89.0076,
+    "latitude": 24.4102
+  },
+  {
+    "region": "Rajshahi",
+    "district": "Chapai Nawabganj",
+    "city": "Chapai Nawabganj",
+    "covered_area": [
+      "Bholahat",
+      "Gomostapur",
+      "Nachole",
+      "Chapai Nawabganj Sadar",
+      "Shibganj"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/chapainawabganj-flowchart.png",
+    "longitude": 88.2939,
+    "latitude": 24.5936
+  },
+  {
+    "region": "Rajshahi",
+    "district": "Pabna",
+    "city": "Pabna",
+    "covered_area": [
+      "Atghoria",
+      "Bera",
+      "Bhangura",
+      "Chatmohar",
+      "Faridpur",
+      "Ishwardi",
+      "Pabna Sadar",
+      "Santhia",
+      "Sujanagar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/pabna-flowchart.png",
+    "longitude": 89.2562,
+    "latitude": 24.0113
+  },
+  {
+    "region": "Rajshahi",
+    "district": "Rajshahi",
+    "city": "Rajshahi",
+    "covered_area": [
+      "Bagha",
+      "Baghmara",
+      "Charghat",
+      "Durgapur",
+      "Godagari",
+      "Mohanpur",
+      "Paba",
+      "Puthia",
+      "Tanore"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/rajshahi-flowchart.png",
+    "longitude": 88.6241,
+    "latitude": 24.3636
+  },
+  {
+    "region": "Rajshahi",
+    "district": "Sirajganj",
+    "city": "Sirajganj",
+    "covered_area": [
+      "Belkuchi",
+      "Chauhali",
+      "Kamarkhanda",
+      "Kazipur",
+      "Raiganj",
+      "Shahjadpur",
+      "Sirajganj Sadar",
+      "Tarash",
+      "Ullapara"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/sirajganj-flowchart.png",
+    "longitude": 89.5699,
+    "latitude": 24.3141
+  },
+  {
+    "region": "Rangpur",
+    "district": "Dinajpur",
+    "city": "Dinajpur",
+    "covered_area": [
+      "Birampur",
+      "Birganj",
+      "Birol",
+      "Bochaganj",
+      "Chirirbandar",
+      "Dinajpur Sadar",
+      "Fulbari",
+      "Ghoraghat",
+      "Hakimpur",
+      "Kaharol",
+      "Khansama",
+      "Nawabganj",
+      "Parbatipur"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/dinajpur-flowchart.png",
+    "longitude": 88.6332,
+    "latitude": 25.6279
+  },
+  {
+    "region": "Rangpur",
+    "district": "Gaibandha",
+    "city": "Gaibandha",
+    "covered_area": [
+      "Fulchhari",
+      "Gaibandha Sadar",
+      "Gobindaganj",
+      "Palashbari",
+      "Sadullapur",
+      "Sughatta",
+      "Sundarganj"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/gaibandha-flowchart.png",
+    "longitude": 89.5430,
+    "latitude": 25.3297
+  },
+  {
+    "region": "Rangpur",
+    "district": "Kurigram",
+    "city": "Kurigram",
+    "covered_area": [
+      "Bhurungamari",
+      "Char Rajibpur",
+      "Chilmari",
+      "Kurigram Sadar",
+      "Nageshwari",
+      "Phulbari",
+      "Rajarhat",
+      "Rowmari",
+      "Ulipur"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/kurigram-flowchart.png",
+    "longitude": 89.6295,
+    "latitude": 25.8072
+  },
+  {
+    "region": "Rangpur",
+    "district": "Lalmonirhat",
+    "city": "Lalmonirhat",
+    "covered_area": [
+      "Aditmari",
+      "Hatibandha",
+      "Kaliganj",
+      "Lalmonirhat Sadar",
+      "Patgram"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/lalmonirhat-flowchart.png",
+    "longitude": 89.2847,
+    "latitude": 25.9923
+  },
+  {
+    "region": "Rangpur",
+    "district": "Nilphamari",
+    "city": "Nilphamari",
+    "covered_area": [
+      "Dimla",
+      "Domar",
+      "Jaldhaka",
+      "Kishoreganj",
+      "Nilphamari Sadar",
+      "Saidpur"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/nilphamari-flowchart.png",
+    "longitude": 88.9414,
+    "latitude": 25.8483
+  },
+  {
+    "region": "Rangpur",
+    "district": "Panchagarh",
+    "city": "Panchagarh",
+    "covered_area": [
+      "Atwari",
+      "Boda",
+      "Debiganj",
+      "Panchagarh Sadar",
+      "Tetulia"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/panchagarh-flowchart.png",
+    "longitude": 88.5952,
+    "latitude": 26.2709
+  },
+  {
+    "region": "Rangpur",
+    "district": "Rangpur",
+    "city": "Rangpur",
+    "covered_area": [
+      "Badarganj",
+      "Gangachara",
+      "Kaunia",
+      "Rangpur Sadar",
+      "Mithapukur",
+      "Pirgachha",
+      "Pirganj",
+      "Taraganj"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/rangpur-flowchart.png",
+    "longitude": 89.2752,
+    "latitude": 25.7439
+  },
+  {
+    "region": "Rangpur",
+    "district": "Thakurgaon",
+    "city": "Thakurgaon",
+    "covered_area": [
+      "Baliadangi",
+      "Haripur",
+      "Pirganj",
+      "Ranishankail",
+      "Thakurgaon Sadar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/thakurgaon-flowchart.png",
+    "longitude": 88.4283,
+    "latitude": 26.0418
+  },
+  {
+    "region": "Sylhet",
+    "district": "Habiganj",
+    "city": "Habiganj",
+    "covered_area": [
+      "Ajmiriganj",
+      "Bahubal",
+      "Baniyachong",
+      "Chunarughat",
+      "Habiganj Sadar",
+      "Lakhai",
+      "Madhabpur",
+      "Nabiganj",
+      "Shaistaganj"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/habiganj-flowchart.png",
+    "longitude": 91.4167,
+    "latitude": 24.3725
+  },
+  {
+    "region": "Sylhet",
+    "district": "Moulvibazar",
+    "city": "Moulvibazar",
+    "covered_area": [
+      "Barlekha",
+      "Juri",
+      "Kamalganj",
+      "Kulaura",
+      "Moulvibazar Sadar",
+      "Rajnagar",
+      "Sreemangal"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/moulvibazar-flowchart.png",
+    "longitude": 91.7700,
+    "latitude": 24.3000
+  },
+  {
+    "region": "Sylhet",
+    "district": "Sunamganj",
+    "city": "Sunamganj",
+    "covered_area": [
+      "Bishwambarpur",
+      "Chhatak",
+      "Derai",
+      "Dharampasha",
+      "Dowarabazar",
+      "Jagannathpur",
+      "Jamalganj",
+      "Sullah",
+      "Sunamganj Sadar",
+      "Tahirpur"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/sunamganj-flowchart.png",
+    "longitude": 91.4000,
+    "latitude": 25.0700
+  },
+  {
+    "region": "Sylhet",
+    "district": "Sylhet",
+    "city": "Sylhet",
+    "covered_area": [
+      "Balaganj",
+      "Beanibazar",
+      "Biswanath",
+      "Companiganj",
+      "Dakshin Surma",
+      "Fenchuganj",
+      "Golapganj",
+      "Gowainghat",
+      "Jaintiapur",
+      "Kanaighat",
+      "Osmaninagar",
+      "Sylhet Sadar",
+      "Zakiganj"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/sylhet-flowchart.png",
+    "longitude": 91.8690,
+    "latitude": 24.8948
+  },
+  {
+    "region": "Barisal",
+    "district": "Barguna",
+    "city": "Barguna",
+    "covered_area": [
+      "Amtali",
+      "Bamna",
+      "Barguna Sadar",
+      "Betagi",
+      "Patharghata",
+      "Taltali"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/barguna-flowchart.png",
+    "longitude": 90.1121,
+    "latitude": 22.0953
+  },
+  {
+    "region": "Barisal",
+    "district": "Barisal",
+    "city": "Barisal",
+    "covered_area": [
+      "Agailjhara",
+      "Babuganj",
+      "Bakerganj",
+      "Banaripara",
+      "Barisal Sadar",
+      "Gournadi",
+      "Hizla",
+      "Mehendiganj",
+      "Muladi",
+      "Wazirpur"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/barisal-flowchart.png",
+    "longitude": 90.3667,
+    "latitude": 22.7010
+  },
+  {
+    "region": "Barisal",
+    "district": "Bhola",
+    "city": "Bhola",
+    "covered_area": [
+      "Bhola Sadar",
+      "Borhanuddin",
+      "Char Fasson",
+      "Daulatkhan",
+      "Lalmohan",
+      "Manpura",
+      "Tazumuddin"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/bhola-flowchart.png",
+    "longitude": 90.6400,
+    "latitude": 22.3167
+  },
+  {
+    "region": "Barisal",
+    "district": "Jhalokathi",
+    "city": "Jhalokathi",
+    "covered_area": [
+      "Jhalokathi Sadar",
+      "Kathalia",
+      "Nalchity",
+      "Rajapur"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/jhalokathi-flowchart.png",
+    "longitude": 90.2000,
+    "latitude": 22.5833
+  },
+  {
+    "region": "Barisal",
+    "district": "Patuakhali",
+    "city": "Patuakhali",
+    "covered_area": [
+      "Bauphal",
+      "Dashmina",
+      "Dumki",
+      "Galachipa",
+      "Kalapara",
+      "Mirzaganj",
+      "Patuakhali Sadar",
+      "Rangabali"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/patuakhali-flowchart.png",
+    "longitude": 90.3200,
+    "latitude": 22.3500
+  },
+  {
+    "region": "Barisal",
+    "district": "Pirojpur",
+    "city": "Pirojpur",
+    "covered_area": [
+      "Bhandaria",
+      "Kaukhali",
+      "Mathbaria",
+      "Nazirpur",
+      "Pirojpur Sadar",
+      "Saray",
+      "Zianagar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/pirojpur-flowchart.png",
+    "longitude": 89.9600,
+    "latitude": 22.5800
+  },
+  {
+    "region": "Khulna",
+    "district": "Bagerhat",
+    "city": "Bagerhat",
+    "covered_area": [
+      "Bagerhat Sadar",
+      "Chitalmari",
+      "Fakirhat",
+      "Kachua",
+      "Mollahat",
+      "Mongla",
+      "Morrelganj",
+      "Rampal",
+      "Sarankhola"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/bagerhat-flowchart.png",
+    "longitude": 89.7890,
+    "latitude": 22.6590
+  },
+  {
+    "region": "Khulna",
+    "district": "Chuadanga",
+    "city": "Chuadanga",
+    "covered_area": [
+      "Alamdanga",
+      "Chuadanga Sadar",
+      "Damurhuda",
+      "Jibannagar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/chuadanga-flowchart.png",
+    "longitude": 89.1553,
+    "latitude": 23.6425
+  },
+  {
+    "region": "Khulna",
+    "district": "Jessore",
+    "city": "Jessore",
+    "covered_area": [
+      "Abhaynagar",
+      "Bagherpara",
+      "Chaugachha",
+      "Jessore Sadar",
+      "Jhikargachha",
+      "Keshabpur",
+      "Manirampur",
+      "Sharsha"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/jessore-flowchart.png",
+    "longitude": 89.2000,
+    "latitude": 23.1667
+  },
+  {
+    "region": "Khulna",
+    "district": "Jhenaidah",
+    "city": "Jhenaidah",
+    "covered_area": [
+      "Harinakunda",
+      "Jhenaidah Sadar",
+      "Kaliganj",
+      "Kotchandpur",
+      "Maheshpur",
+      "Shailkupa"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/jhenaidah-flowchart.png",
+    "longitude": 89.1667,
+    "latitude": 23.5333
+  },
+  {
+    "region": "Khulna",
+    "district": "Khulna",
+    "city": "Khulna",
+    "covered_area": [
+      "Batiaghata",
+      "Dacope",
+      "Dumuria",
+      "Dighalia",
+      "Koira",
+      "Khalishpur",
+      "Khan Jahan Ali",
+      "Khulna Sadar",
+      "Paikgachha",
+      "Phultala",
+      "Rupsha",
+      "Terokhada"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/khulna-flowchart.png",
+    "longitude": 89.5500,
+    "latitude": 22.8200
+  },
+  {
+    "region": "Khulna",
+    "district": "Kushtia",
+    "city": "Kushtia",
+    "covered_area": [
+      "Bheramara",
+      "Daulatpur",
+      "Khoksa",
+      "Kumarkhali",
+      "Kushtia Sadar",
+      "Mirpur"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/kushtia-flowchart.png",
+    "longitude": 89.1200,
+    "latitude": 23.9000
+  },
+  {
+    "region": "Khulna",
+    "district": "Magura",
+    "city": "Magura",
+    "covered_area": [
+      "Magura Sadar",
+      "Mohammadpur",
+      "Shalikha",
+      "Sreepur"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/magura-flowchart.png",
+    "longitude": 89.4200,
+    "latitude": 23.4800
+  },
+  {
+    "region": "Khulna",
+    "district": "Meherpur",
+    "city": "Meherpur",
+    "covered_area": [
+      "Gangni",
+      "Meherpur Sadar",
+      "Mujibnagar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/meherpur-flowchart.png",
+    "longitude": 88.6667,
+    "latitude": 23.7833
+  },
+  {
+    "region": "Khulna",
+    "district": "Narail",
+    "city": "Narail",
+    "covered_area": [
+      "Kalia",
+      "Lohagara",
+      "Narail Sadar"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/narail-flowchart.png",
+    "longitude": 89.6000,
+    "latitude": 23.1800
+  },
+  {
+    "region": "Khulna",
+    "district": "Satkhira",
+    "city": "Satkhira",
+    "covered_area": [
+      "Assasuni",
+      "Debhata",
+      "Kalaroa",
+      "Kaliganj",
+      "Satkhira Sadar",
+      "Shyamnagar",
+      "Tala"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/satkhira-flowchart.png",
+    "longitude": 89.0700,
+    "latitude": 22.7200
+  },
+  {
+    "region": "Mymensingh",
+    "district": "Jamalpur",
+    "city": "Jamalpur",
+    "covered_area": [
+      "Bakshiganj",
+      "Dewanganj",
+      "Islampur",
+      "Jamalpur Sadar",
+      "Madarganj",
+      "Melandaha",
+      "Sarishabari"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/jamalpur-flowchart.png",
+    "longitude": 89.9400,
+    "latitude": 24.9167
+  },
+  {
+    "region": "Mymensingh",
+    "district": "Mymensingh",
+    "city": "Mymensingh",
+    "covered_area": [
+      "Bhaluka",
+      "Dhobaura",
+      "Fulbaria",
+      "Fulpur",
+      "Gaffargaon",
+      "Gouripur",
+      "Haluaghat",
+      "Ishwarganj",
+      "Mymensingh Sadar",
+      "Muktagachha",
+      "Nandail",
+      "Trishal"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/mymensingh-flowchart.png",
+    "longitude": 90.3984,
+    "latitude": 24.7434
+  },
+  {
+    "region": "Mymensingh",
+    "district": "Netrokona",
+    "city": "Netrokona",
+    "covered_area": [
+      "Atpara",
+      "Barhatta",
+      "Durgapur",
+      "Kalmakanda",
+      "Kendua",
+      "Khaliajuri",
+      "Madan",
+      "Mohanganj",
+      "Netrokona Sadar",
+      "Purbadhala"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/netrokona-flowchart.png",
+    "longitude": 90.8656,
+    "latitude": 24.8103
+  },
+  {
+    "region": "Mymensingh",
+    "district": "Sherpur",
+    "city": "Sherpur",
+    "covered_area": [
+      "Jhenaigati",
+      "Nakla",
+      "Nalitabari",
+      "Sherpur Sadar",
+      "Sreebardi"
+    ],
+    "status": "active",
+    "flowchart": "https://example.com/sherpur-flowchart.png",
+    "longitude": 90.1495,
+    "latitude": 25.0746
+  }
+]
