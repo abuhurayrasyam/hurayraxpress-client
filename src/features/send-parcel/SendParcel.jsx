@@ -122,7 +122,7 @@ const SendParcel = () => {
     const inputClasses = "w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary";
     const labelClasses = "block text-sm font-medium text-gray-700 mb-1";
     const sectionTitleClasses = "text-lg font-semibold text-gray-800 mb-4";
-    const mainTitleClasses = "text-2xl md:text-3xl font-bold text-gray-800 mb-8";
+    const mainTitleClasses = "text-2xl md:text-3xl font-bold text-primary mb-8";
     const subHeadingClasses = "text-lg font-semibold text-gray-800 mb-6 mt-8";
     const radioLabelClasses = "flex items-center space-x-2 text-gray-700";
     const radioInputClasses = "form-radio h-4 w-4 text-secondary border-gray-300 focus:ring-secondary";
