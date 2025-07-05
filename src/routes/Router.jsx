@@ -8,6 +8,7 @@ import SignIn from "../features/auth/pages/SignIn";
 import ForgotPassword from "../features/auth/pages/ForgotPassword";
 import ResetPassword from "../features/auth/pages/ResetPassword";
 import Coverage from "../features/coverage/pages/Coverage";
+import SendParcel from "../features/send-parcel/SendParcel";
 
 export const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ export const router = createBrowserRouter([
           path: "/coverage",
           loader: () => fetch('./serviceCenter.json'),
           Component: Coverage
+        },
+        {
+          path: "/send-parcel",
+          loader: () => fetch('./serviceCenter.json'),
+          Component: SendParcel
         }
     ]
   },

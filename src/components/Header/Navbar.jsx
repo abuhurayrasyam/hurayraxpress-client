@@ -15,6 +15,12 @@ const Navbar = () => {
         </>
     )
 
+    const protectedNavLinks = (
+        <>
+            <NavLink to={'/send-parcel'} className={'m-2 cursor-pointer text-[18px] text-secondary hover:text-accent font-bold'}>Send Parcel</NavLink>
+        </>
+    )
+
     return (
         <div className="bg-[#FFFFFF] shadow-sm">
             <div className='navbar w-11/12 mx-auto'>
@@ -26,14 +32,14 @@ const Navbar = () => {
                     <ul
                         tabIndex={0}
                         className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                        {navLinks}
+                        {navLinks}{ user && protectedNavLinks}
                     </ul>
                     </div>
                     <h1 className="text-xl pb-5"><Logo></Logo></h1>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                    {navLinks}
+                    {navLinks}{user && protectedNavLinks}
                     </ul>
                 </div>
                 <div className="navbar-end">

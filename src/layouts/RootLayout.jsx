@@ -9,7 +9,7 @@ const RootLayout = () => {
             <header className='sticky top-0 z-[9999]'>
                 <Navbar></Navbar>
             </header>
-            <main className='bg-[#EAECED] py-1'>
+            <main className='bg-[#f3f4f6] py-1'>
                 <Outlet></Outlet>
             </main>
             <footer>
