@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import useAxiosSecure from "../../../../hooks/useAxiosSecure";
 import { AuthContext } from "../../../../contexts/AuthContext/AuthContext";
 import Loading from "../../../../components/Loading";
+import { useNavigate } from "react-router";
 
 const generateTrackingID = () => {
     const date = new Date();
@@ -17,6 +18,7 @@ const SendParcel = () => {
     const { user } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();
     const [serviceCenters, setServiceCenters] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch('/serviceCenter.json')
@@ -112,15 +114,20 @@ const SendParcel = () => {
                 .then(res => {
                     console.log(res.data);
                     if (res.data.insertedId) {
-                        // TODO: redirect to a payment page 
+                        
+                        const insertedId = res.data.insertedId;
+                        
                         Swal.fire({
                             title: "Redirecting...",
                             text: "Proceeding to payment gateway.",
                             icon: "success",
                             timer: 1500,
                             showConfirmButton: false,
+                        })
+                        .then(() => {
+                            reset();
+                            navigate(`/dashboard/payment/${insertedId}`);
                         });
-                        reset();
                     }
                 })
                 

@@ -25,7 +25,6 @@ const MyParcels = () => {
     };
 
     const handlePay = (id) => {
-        console.log("Proceed to Payment", id);
         navigate(`/dashboard/payment/${id}`)
     };
 
