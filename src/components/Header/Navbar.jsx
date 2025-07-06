@@ -46,6 +46,7 @@ const Navbar = () => {
                     {
                         user ? (
                             <>
+                                <Link to={'/dashboard'} className="btn bg-primary text-white hover:bg-secondary mr-2">Dashboard</Link>
                                 <SignOut></SignOut>
                             </>
                         ) : (

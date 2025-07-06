@@ -9,6 +9,9 @@ import ForgotPassword from "../features/auth/pages/ForgotPassword";
 import ResetPassword from "../features/auth/pages/ResetPassword";
 import Coverage from "../features/coverage/pages/Coverage";
 import SendParcel from "../features/send-parcel/SendParcel";
+import DashboardLayout from "../layouts/DashboardLayout";
+import MyParcels from "../features/my-parcels/pages/MyParcels";
+import Dashboard from "../features/dashboard/pages/Dashboard";
 
 export const router = createBrowserRouter([
   {
@@ -18,7 +21,6 @@ export const router = createBrowserRouter([
     children: [
         {
             index: true,
-            path: "/",
             Component: Home
         },
         {
@@ -52,6 +54,20 @@ export const router = createBrowserRouter([
       {
         path: "reset-password",
         Component: ResetPassword
+      }
+    ]
+  },
+  {
+    path: "/dashboard",
+    Component: DashboardLayout,
+    children: [
+      {
+        index: true,
+        Component: Dashboard
+      },
+      {
+        path: "my-parcels",
+        Component: MyParcels
       }
     ]
   }
