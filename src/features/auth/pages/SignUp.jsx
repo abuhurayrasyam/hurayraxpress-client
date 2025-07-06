@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router';
 import Lottie from 'lottie-react';
 import signUpAnimation from '../../../assets/lotties/signup-animation.json';
@@ -9,6 +9,7 @@ import SignInWithGoogle from '../components/SignInWithGoogle';
 import { AuthContext } from '../../../contexts/AuthContext/AuthContext';
 import Swal from 'sweetalert2';
 import useDocumentTitle from '../../../hooks/useDocumentTitle';
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const SignUp = () => {
 
@@ -21,39 +22,56 @@ const SignUp = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const onSubmit = (data) => {
-        signUpUser(data.email, data.password)
-        .then(() => {
-            updateUserProfile({displayName: data.name, photoURL: data.photo})
-            .then(() => {
-                navigate(`${location.state ? location.state : '/'}`);
-                Swal.fire({
-                    icon: "success",
-                    title: "Your account has been created successfully!",
-                    showConfirmButton: false,
-                    timer: 1500
-                });
-            })
-            .catch(() => {
-                Swal.fire({
-                    title: "Failed to create account. Please try again!",
-                    icon: "error",
-                    draggable: true
-                });
-            })
-        })
-        .catch((error) => {
+    const axiosSecure = useAxiosSecure();
+
+    const [preview, setPreview] = useState(null);
+    const maxFileSize = 500 * 1024;
+
+    const onSubmit = async(data) => {
+        try {
+            await signUpUser(data.email, data.password);
+
+            const formData = new FormData();
+            formData.append("image", data.photo[0]);
+
+            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/upload-image`, {
+                method: "POST",
+                body: formData,
+            });
+
+            const result = await res.json();
+            const imageUrl = result.imageUrl;
+
+            await updateUserProfile({ displayName: data.name, photoURL: imageUrl});
+
+            await axiosSecure.post("/users", {
+                name: data.name,
+                email: data.email,
+                image: imageUrl,
+                termsAccepted: data.termsAndConditions === true
+            });
+
+            navigate(location.state ? location.state : "/");
+
+            Swal.fire({
+            icon: "success",
+            title: "Your account has been created successfully!",
+            showConfirmButton: false,
+            timer: 1500,
+            });
+        }
+        catch(error) {
             const errorCode = error.code;
             let message = "Something went wrong. Please try again.";
             if (errorCode === "auth/email-already-in-use") {
-            message = "This email is already registered!";
+                message = "This email is already registered!";
             }
             Swal.fire({
             title: message,
             icon: "error",
             draggable: true
             });
-        })
+        }
     }
 
     useEffect(() => {
@@ -75,16 +93,55 @@ const SignUp = () => {
                             <h1 className="font-semibold text-secondary text-center text-xl">Create an account</h1>
                             <form onSubmit={handleSubmit(onSubmit)} className="fieldset">
 
+                                <div className="w-full flex justify-center mt-3">
+                                    <div className="w-25 h-25 border border-dashed border-neutral rounded-lg flex items-center justify-center relative overflow-hidden bg-white">
+                                        {preview ? (
+                                        <img
+                                            src={preview}
+                                            alt="Preview"
+                                            className="object-cover w-full h-full"
+                                        />
+                                        ) : (
+                                        <span className="text-neutral text-sm text-center">
+                                            Select Image <br />
+                                            Max 500KB
+                                        </span>
+                                        )}
+                                        <input
+                                        type="file"
+                                        accept="image/*"
+                                        {...register('photo', {
+                                            required: 'Profile image is required',
+                                            validate: {
+                                            lessThan500KB: (files) =>
+                                                files[0]?.size < maxFileSize || 'Image must be smaller than 500KB',
+                                            acceptedFormats: (files) =>
+                                                ['image/jpeg', 'image/png', 'image/jpg'].includes(files[0]?.type) ||
+                                                'Only JPG, PNG, or JPEG images are allowed',
+                                            }
+                                        })}
+                                        className="absolute opacity-0 inset-0 cursor-pointer"
+                                        onChange={(e) => {
+                                            const file = e.target.files[0];
+                                            if (file && file.size < maxFileSize) {
+                                            setPreview(URL.createObjectURL(file));
+                                            } else {
+                                            setPreview(null);
+                                            }
+                                        }}
+                                        />
+                                    </div>
+                                </div>
+                                {errors.photo && (
+                                    <p className="text-red-500 font-semibold mt-2 text-center">{errors.photo.message}</p>
+                                )}
+                                <label className="label font-semibold text-center block w-full">Profile Image (Max 500KB)</label>
+
+
                                 <label className="label">Your Name</label>
                                 <input type="text" {...register('name', {required: true, maxLength: 20})} className="input" placeholder="Enter your name" />
                                 {
                                     errors.name?.type === 'required' && <p className='text-red-500 font-semibold'>Name is required</p>
-                                }
-
-                                <label className="label">Photo URL</label>
-                                <input type="url" {...register('photo', {required: true})} className="input" placeholder="Enter your photo url" />
-                                {
-                                    errors.photo?.type === 'required' && <p className='text-red-500 font-semibold'>Photo url is required</p>
                                 }
 
                                 <label className="label">Email</label>
