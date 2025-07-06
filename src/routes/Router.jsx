@@ -12,6 +12,7 @@ import SendParcel from "../features/send-parcel/SendParcel";
 import DashboardLayout from "../layouts/DashboardLayout";
 import MyParcels from "../features/my-parcels/pages/MyParcels";
 import Dashboard from "../features/dashboard/pages/Dashboard";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,7 @@ export const router = createBrowserRouter([
         {
           path: "/send-parcel",
           loader: () => fetch('./serviceCenter.json'),
-          Component: SendParcel
+          element: <PrivateRoute><SendParcel></SendParcel></PrivateRoute>
         }
     ]
   },
@@ -59,15 +60,15 @@ export const router = createBrowserRouter([
   },
   {
     path: "/dashboard",
-    Component: DashboardLayout,
+    element: <PrivateRoute><DashboardLayout></DashboardLayout></PrivateRoute>,
     children: [
       {
         index: true,
-        Component: Dashboard
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
       },
       {
         path: "my-parcels",
-        Component: MyParcels
+        element: <PrivateRoute><MyParcels></MyParcels></PrivateRoute>
       }
     ]
   }
