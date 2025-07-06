@@ -4,11 +4,12 @@ import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../contexts/AuthContext/AuthContext';
 import { FaBoxOpen, FaEye, FaMoneyBillAlt, FaMoneyBillWave, FaTrashAlt } from 'react-icons/fa';
-import { Link } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 const MyParcels = () => {
     const { user } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();
+    const navigate = useNavigate();
 
     const { data: parcels = [], refetch } = useQuery({
         queryKey: ['my-parcels', user?.email],
@@ -25,7 +26,7 @@ const MyParcels = () => {
 
     const handlePay = (id) => {
         console.log("Proceed to Payment", id);
-        // Implement payment logic
+        navigate(`/dashboard/payment/${id}`)
     };
 
     const handleDelete = async (id) => {
@@ -108,14 +109,17 @@ const MyParcels = () => {
                                         <FaEye className="text-white text-sm" /> View
                                     </button>
 
-                                    {parcel.payment_status === "unpaid" && (
-                                        <button
+                                    <button
                                         onClick={() => handlePay(parcel._id)}
-                                        className="btn btn-xs flex items-center justify-center gap-1 text-xs w-24 h-7 text-white bg-green-600 hover:bg-green-700"
+                                        className={`btn btn-xs flex items-center justify-center gap-1 text-xs w-24 h-7 text-white ${
+                                            parcel.payment_status === "paid" 
+                                            ? "bg-neutral cursor-not-allowed"
+                                            : "bg-green-600 hover:bg-green-700"
+                                        }`}
+                                        disabled={parcel.payment_status === "paid"}
                                         >
                                         <FaMoneyBillWave className="text-sm" /> Pay Now
                                         </button>
-                                    )}
 
                                     <button
                                         onClick={() => handleDelete(parcel._id)}
