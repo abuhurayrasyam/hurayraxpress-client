@@ -63,14 +63,7 @@ const MyParcels = () => {
 
     return (
         <div className="overflow-x-auto rounded-sm w-11/12 mx-auto mt-10">
-            {parcels.length === 0 ? (
-                <div className="flex flex-col items-center justify-center py-10 text-neutral">
-                    <FaBoxOpen className="text-4xl text-gray-400 mb-2" />
-                    <p className="text-lg font-medium">No parcels found</p>
-                    <p className="text-sm text-gray-500 mb-4">Looks like you haven't sent any parcels yet.</p>
-                    <Link to={'/send-parcel'}><button className="btn btn-sm bg-primary text-white rounded-md"> Send a Parcel </button></Link>
-                </div>
-            ) : (
+            {parcels?.length > 0 ? (
                 <table className="table table-zebra w-full">
                     <thead className="bg-primary text-white font-semibold">
                         <tr>
@@ -132,6 +125,13 @@ const MyParcels = () => {
                         ))}
                     </tbody>
                 </table>
+            ) : (
+                <div className="flex flex-col items-center justify-center py-10 text-neutral">
+                    <FaBoxOpen className="text-4xl text-gray-400 mb-2" />
+                    <p className="text-lg font-medium">No parcels found</p>
+                    <p className="text-sm text-gray-500 mb-4">Looks like you haven't sent any parcels yet.</p>
+                    <Link to={'/send-parcel'}><button className="btn btn-sm bg-primary text-white rounded-md"> Send a Parcel </button></Link>
+                </div>
             )}
         </div>
     );

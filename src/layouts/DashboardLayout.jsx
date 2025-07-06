@@ -1,13 +1,17 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router';
 import Logo from '../components/Logo';
+import { FaBoxOpen, FaHome, FaMoneyCheckAlt, FaSearchLocation, FaUserEdit } from 'react-icons/fa';
 
 const DashboardLayout = () => {
 
     const navLinks = (
         <>
-            <li><NavLink to={'/dashboard'} end>Home</NavLink></li>
-            <li><NavLink to={'/dashboard/my-parcels'}>My Parcels</NavLink></li>
+            <NavLink to="/dashboard" end className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaHome /> Home</NavLink>
+            <NavLink to="/dashboard/my-parcels" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaBoxOpen /> My Parcels</NavLink>
+            <NavLink to="/dashboard/payment-history" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaMoneyCheckAlt /> Payment History</NavLink>
+            <NavLink to="/dashboard/track-parcel" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaSearchLocation /> Track a Package</NavLink>
+            <NavLink to="/dashboard/update-profile" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaUserEdit /> Update Profile</NavLink>
         </>
     )
 
