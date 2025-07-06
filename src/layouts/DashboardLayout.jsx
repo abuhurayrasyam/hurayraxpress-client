@@ -2,16 +2,18 @@ import React from 'react';
 import { NavLink, Outlet } from 'react-router';
 import Logo from '../components/Logo';
 import { FaBoxOpen, FaHome, FaMoneyCheckAlt, FaSearchLocation, FaUserEdit } from 'react-icons/fa';
+import { FiPackage } from 'react-icons/fi';
 
 const DashboardLayout = () => {
 
     const navLinks = (
         <>
             <NavLink to="/dashboard" end className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaHome /> Home</NavLink>
+            <NavLink to="/dashboard/send-parcel" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FiPackage /> Send Parcel</NavLink>
             <NavLink to="/dashboard/my-parcels" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaBoxOpen /> My Parcels</NavLink>
-            <NavLink to="/dashboard/payment-history" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaMoneyCheckAlt /> Payment History</NavLink>
-            <NavLink to="/dashboard/track-parcel" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaSearchLocation /> Track a Package</NavLink>
-            <NavLink to="/dashboard/update-profile" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaUserEdit /> Update Profile</NavLink>
+            <NavLink to="/dashboard/my-payment-history" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaMoneyCheckAlt /> My Payment History</NavLink>
+            <NavLink to="/dashboard/track-parcel" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaSearchLocation /> Track a Parcel</NavLink>
+            <NavLink to="/dashboard/update-profile" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaUserEdit /> Update Your Profile</NavLink>
         </>
     )
 

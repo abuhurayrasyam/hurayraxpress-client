@@ -1,9 +1,9 @@
 import { useForm } from "react-hook-form";
 import Swal from 'sweetalert2';
-import { useLoaderData } from "react-router";
-import useAxiosSecure from "../../hooks/useAxiosSecure";
-import { useContext } from "react";
-import { AuthContext } from "../../contexts/AuthContext/AuthContext";
+import { useContext, useEffect, useState } from "react";
+import useAxiosSecure from "../../../../hooks/useAxiosSecure";
+import { AuthContext } from "../../../../contexts/AuthContext/AuthContext";
+import Loading from "../../../../components/Loading";
 
 const generateTrackingID = () => {
     const date = new Date();
@@ -16,7 +16,17 @@ const SendParcel = () => {
     const { register, handleSubmit, watch, formState: { errors }, reset } = useForm();
     const { user } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();
-    const serviceCenters = useLoaderData();
+    const [serviceCenters, setServiceCenters] = useState([]);
+
+    useEffect(() => {
+        fetch('/serviceCenter.json')
+        .then((res) => res.json())
+        .then((data) => setServiceCenters(data))
+    }, []);
+
+     if (!serviceCenters.length) {
+        return <Loading></Loading>;
+    }
 
     // Extract unique regions
     const uniqueRegions = [...new Set(serviceCenters.map((w) => w.region))];

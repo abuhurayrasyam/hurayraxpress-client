@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import useAxiosSecure from '../../../hooks/useAxiosSecure';
-import { AuthContext } from '../../../contexts/AuthContext/AuthContext';
-import Loading from '../../../components/Loading';
+import useAxiosSecure from '../../../../hooks/useAxiosSecure';
+import { AuthContext } from '../../../../contexts/AuthContext/AuthContext';
+import Loading from '../../../../components/Loading';
 import { FaMoneyCheckAlt } from 'react-icons/fa';
 import { Link } from 'react-router';
 
 const formatDate = (iso) => new Date(iso).toLocaleString();
 
-const PaymentHistory = () => {
+const MyPaymentHistory = () => {
     const { user } = useContext(AuthContext);
     const axiosSecure = useAxiosSecure();
 
@@ -34,7 +34,7 @@ const PaymentHistory = () => {
                             <th>Parcel ID</th>
                             <th>Amount</th>
                             <th>Transaction</th>
-                            <th>Paid At</th>
+                            <th>Payment Time</th>
                         </tr>
                     </thead>
                     <tbody className='bg-white'>
@@ -57,9 +57,9 @@ const PaymentHistory = () => {
                 </table> 
                 ) : (
                 <div className="flex flex-col items-center justify-center py-12 text-neutral max-w-md mx-auto">
-                    <FaMoneyCheckAlt className="text-5xl text-gray-400 mb-4" />
+                    <FaMoneyCheckAlt className="text-5xl text-neutral mb-4" />
                     <p className="text-xl font-semibold mb-2">No payment history found</p>
-                    <p className="text-sm text-gray-500 mb-6 text-center">
+                    <p className="text-sm text-neutral mb-6 text-center">
                         You have not made any payments yet.
                     </p>
                     <Link to="/dashboard/my-parcels">
@@ -73,4 +73,4 @@ const PaymentHistory = () => {
     );
 };
 
-export default PaymentHistory;
+export default MyPaymentHistory;

@@ -8,13 +8,16 @@ import SignIn from "../features/auth/pages/SignIn";
 import ForgotPassword from "../features/auth/pages/ForgotPassword";
 import ResetPassword from "../features/auth/pages/ResetPassword";
 import Coverage from "../features/coverage/pages/Coverage";
-import SendParcel from "../features/send-parcel/SendParcel";
-import DashboardLayout from "../layouts/DashboardLayout";
-import MyParcels from "../features/my-parcels/pages/MyParcels";
-import Dashboard from "../features/dashboard/pages/Dashboard";
 import PrivateRoute from "./PrivateRoute";
+import DashboardLayout from "../layouts/DashboardLayout";
+import Dashboard from "../features/dashboard/merchant/pages/Dashboard";
+import SendParcel from "../features/dashboard/merchant/pages/SendParcel";
+import MyParcels from "../features/dashboard/merchant/pages/MyParcels";
 import Payment from "../features/payment/pages/Payment";
-import PaymentHistory from "../features/payment-history/pages/PaymentHistory";
+import MyPaymentHistory from "../features/dashboard/merchant/pages/MyPaymentHistory";
+import Loading from "../components/Loading";
+import TrackParcel from "../features/dashboard/merchant/pages/TrackParcel";
+import UpdateYourProfile from "../features/dashboard/merchant/pages/UpdateYourProfile";
 
 export const router = createBrowserRouter([
   {
@@ -29,12 +32,8 @@ export const router = createBrowserRouter([
         {
           path: "/coverage",
           loader: () => fetch('./serviceCenter.json'),
+          hydrateFallbackElement: <Loading></Loading>,
           Component: Coverage
-        },
-        {
-          path: "/send-parcel",
-          loader: () => fetch('./serviceCenter.json'),
-          element: <PrivateRoute><SendParcel></SendParcel></PrivateRoute>
         }
     ]
   },
@@ -69,6 +68,10 @@ export const router = createBrowserRouter([
         element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>
       },
       {
+        path: "send-parcel",
+        element: <PrivateRoute><SendParcel></SendParcel></PrivateRoute>
+      },
+      {
         path: "my-parcels",
         element: <PrivateRoute><MyParcels></MyParcels></PrivateRoute>
       },
@@ -77,8 +80,16 @@ export const router = createBrowserRouter([
         element: <PrivateRoute><Payment></Payment></PrivateRoute>
       },
       {
-        path: "payment-history",
-        element: <PrivateRoute><PaymentHistory></PaymentHistory></PrivateRoute>
+        path: "my-payment-history",
+        element: <PrivateRoute><MyPaymentHistory></MyPaymentHistory></PrivateRoute>
+      },
+      {
+        path: "track-parcel",
+        element: <PrivateRoute><TrackParcel></TrackParcel></PrivateRoute>
+      },
+      {
+        path: "update-profile",
+        element: <PrivateRoute><UpdateYourProfile></UpdateYourProfile></PrivateRoute>
       }
     ]
   }

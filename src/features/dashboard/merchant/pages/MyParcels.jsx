@@ -1,8 +1,8 @@
 import { useQuery } from '@tanstack/react-query';
 import React, { useContext } from 'react';
-import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import useAxiosSecure from '../../../../hooks/useAxiosSecure';
 import Swal from 'sweetalert2';
-import { AuthContext } from '../../../contexts/AuthContext/AuthContext';
+import { AuthContext } from '../../../../contexts/AuthContext/AuthContext';
 import { FaBoxOpen, FaEye, FaMoneyBillAlt, FaMoneyBillWave, FaTrashAlt } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router';
 
@@ -83,7 +83,7 @@ const MyParcels = () => {
                                 <td className="max-w-[180px] truncate">{parcel.title}</td>
                                 <td className="capitalize">{parcel.type}</td>
                                 <td>{formatDate(parcel.creation_date)}</td>
-                                <td>৳{parcel.cost}</td>
+                                <td>৳ {parcel.cost}</td>
                                 <td>
                                     <span
                                         className={`badge ${parcel.payment_status === "paid"
@@ -126,11 +126,11 @@ const MyParcels = () => {
                     </tbody>
                 </table>
             ) : (
-                <div className="flex flex-col items-center justify-center py-10 text-neutral">
-                    <FaBoxOpen className="text-4xl text-gray-400 mb-2" />
-                    <p className="text-lg font-medium">No parcels found</p>
-                    <p className="text-sm text-gray-500 mb-4">Looks like you haven't sent any parcels yet.</p>
-                    <Link to={'/send-parcel'}><button className="btn btn-sm bg-primary text-white rounded-md"> Send a Parcel </button></Link>
+                <div className="flex flex-col items-center justify-center py-12 text-neutral max-w-md mx-auto">
+                    <FaBoxOpen className="text-5xl text-neutral mb-4" />
+                    <p className="text-xl font-semibold mb-2">No parcels found</p>
+                    <p className="text-sm text-neutral mb-6 text-center">Looks like you haven't sent any parcels yet.</p>
+                    <Link to={'/dashboard/send-parcel'}><button className="btn btn-sm bg-primary text-white rounded-md px-6 py-2 hover:bg-primary-focus transition"> Send a Parcel </button></Link>
                 </div>
             )}
         </div>
