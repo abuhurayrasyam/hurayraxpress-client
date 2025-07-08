@@ -46,7 +46,7 @@ const Navbar = () => {
                         ) : (
                             <>
                                 <Link to={'/auth/signin'} className="btn hover:bg-secondary hover:text-white mr-2">SignIn</Link>
-                                <Link className="btn bg-primary hover:bg-secondary text-white">Be a Rider</Link>
+                                <Link to={'/dashboard/be-rider'} className="btn bg-primary hover:bg-secondary text-white">Be a Rider</Link>
                             </>
                         )
                     }

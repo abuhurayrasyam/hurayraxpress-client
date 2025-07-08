@@ -1,8 +1,10 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router';
 import Logo from '../components/Logo';
-import { FaBoxOpen, FaHome, FaMoneyCheckAlt, FaSearchLocation, FaUserEdit } from 'react-icons/fa';
+import { FaBoxOpen, FaHome, FaMoneyCheckAlt, FaMotorcycle, FaSearchLocation, FaUserEdit } from 'react-icons/fa';
 import { FiPackage } from 'react-icons/fi';
+import { MdPendingActions } from 'react-icons/md';
+import { BsPersonCheckFill } from 'react-icons/bs';
 
 const DashboardLayout = () => {
 
@@ -13,6 +15,9 @@ const DashboardLayout = () => {
             <NavLink to="/dashboard/my-parcels" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaBoxOpen /> My Parcels</NavLink>
             <NavLink to="/dashboard/my-payment-history" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaMoneyCheckAlt /> My Payment History</NavLink>
             <NavLink to="/dashboard/track-parcel" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaSearchLocation /> Track a Parcel</NavLink>
+            <NavLink to="/dashboard/be-rider" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaMotorcycle /> Be A Rider</NavLink>
+            <NavLink to="/dashboard/pending-riders" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><MdPendingActions /> Pending Riders</NavLink>
+            <NavLink to="/dashboard/active-riders" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><BsPersonCheckFill /> Active Riders</NavLink>
             <NavLink to="/dashboard/update-profile" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaUserEdit /> Update Your Profile</NavLink>
         </>
     )

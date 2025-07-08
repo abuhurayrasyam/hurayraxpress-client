@@ -18,6 +18,9 @@ import MyPaymentHistory from "../features/dashboard/merchant/pages/MyPaymentHist
 import Loading from "../components/Loading";
 import TrackParcel from "../features/dashboard/merchant/pages/TrackParcel";
 import UpdateYourProfile from "../features/dashboard/merchant/pages/UpdateYourProfile";
+import BeARider from "../features/dashboard/raider/pages/BeARider";
+import PendingRiders from "../features/dashboard/admin/pages/PendingRiders";
+import ActiveRiders from "../features/dashboard/admin/pages/ActiveRiders";
 
 export const router = createBrowserRouter([
   {
@@ -76,16 +79,28 @@ export const router = createBrowserRouter([
         element: <PrivateRoute><MyParcels></MyParcels></PrivateRoute>
       },
       {
+        path: "track-parcel",
+        element: <PrivateRoute><TrackParcel></TrackParcel></PrivateRoute>
+      },
+      {
+        path: "be-rider",
+        element: <PrivateRoute><BeARider></BeARider></PrivateRoute>
+      },
+      {
+        path: "pending-riders",
+        element: <PrivateRoute><PendingRiders></PendingRiders></PrivateRoute>
+      },
+      {
+        path: "active-riders",
+        element: <PrivateRoute><ActiveRiders></ActiveRiders></PrivateRoute>
+      },
+      {
         path: "payment/:parcelId",
         element: <PrivateRoute><Payment></Payment></PrivateRoute>
       },
       {
         path: "my-payment-history",
         element: <PrivateRoute><MyPaymentHistory></MyPaymentHistory></PrivateRoute>
-      },
-      {
-        path: "track-parcel",
-        element: <PrivateRoute><TrackParcel></TrackParcel></PrivateRoute>
       },
       {
         path: "update-profile",
