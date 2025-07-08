@@ -9,7 +9,6 @@ import SignInWithGoogle from '../components/SignInWithGoogle';
 import { AuthContext } from '../../../contexts/AuthContext/AuthContext';
 import Swal from 'sweetalert2';
 import useDocumentTitle from '../../../hooks/useDocumentTitle';
-import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import axios from 'axios';
 
 const SignUp = () => {
@@ -22,8 +21,6 @@ const SignUp = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
-
-    const axiosSecure = useAxiosSecure();
 
     const [preview, setPreview] = useState(null);
     const maxFileSize = 500 * 1024;
@@ -53,7 +50,7 @@ const SignUp = () => {
                         last_sign_in: new Date().toISOString()
                     };
 
-                    return axiosSecure.post("/users", userInfo);
+                    return axios.post(`${import.meta.env.VITE_API_BASE_URL}/users`, userInfo);
                 });
             })
             .then(() => {
