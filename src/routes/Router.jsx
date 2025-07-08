@@ -21,6 +21,7 @@ import UpdateYourProfile from "../features/dashboard/merchant/pages/UpdateYourPr
 import BeARider from "../features/dashboard/raider/pages/BeARider";
 import PendingRiders from "../features/dashboard/admin/pages/PendingRiders";
 import ActiveRiders from "../features/dashboard/admin/pages/ActiveRiders";
+import DeactivatedRiders from "../features/dashboard/admin/pages/DeactivatedRiders";
 
 export const router = createBrowserRouter([
   {
@@ -93,6 +94,10 @@ export const router = createBrowserRouter([
       {
         path: "active-riders",
         element: <PrivateRoute><ActiveRiders></ActiveRiders></PrivateRoute>
+      },
+      {
+        path: "deactivated-riders",
+        element: <PrivateRoute><DeactivatedRiders></DeactivatedRiders></PrivateRoute>
       },
       {
         path: "payment/:parcelId",
