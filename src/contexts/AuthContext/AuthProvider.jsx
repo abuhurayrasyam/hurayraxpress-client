@@ -45,6 +45,8 @@ const AuthProvider = ({children}) => {
     },[])
 
     const authData = {
+        user,
+        setUser,
         loading,
         setLoading,
         signUpUser,
@@ -52,8 +54,6 @@ const AuthProvider = ({children}) => {
         signInUser,
         googleSignIn,
         signOutUser,
-        user,
-        setUser,
     };
 
     return (

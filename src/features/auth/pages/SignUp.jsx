@@ -10,6 +10,7 @@ import { AuthContext } from '../../../contexts/AuthContext/AuthContext';
 import Swal from 'sweetalert2';
 import useDocumentTitle from '../../../hooks/useDocumentTitle';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
+import axios from 'axios';
 
 const SignUp = () => {
 
@@ -27,51 +28,57 @@ const SignUp = () => {
     const [preview, setPreview] = useState(null);
     const maxFileSize = 500 * 1024;
 
-    const onSubmit = async(data) => {
-        try {
-            await signUpUser(data.email, data.password);
-
+    const onSubmit = (data) => {
+        signUpUser(data.email, data.password)
+        .then(() => {
             const formData = new FormData();
             formData.append("image", data.photo[0]);
 
-            const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/upload-image`, {
-                method: "POST",
-                body: formData,
+            axios.post(`${import.meta.env.VITE_API_BASE_URL}/upload-image`, formData, {
+                headers: {
+                    'Content-Type': 'multipart/form-data',
+                },
+            })
+            .then(response => {
+                const imageUrl = response.data.imageUrl;
+                return updateUserProfile({ displayName: data.name, photoURL: imageUrl })
+                .then(() => {
+                    const userInfo = {
+                        name: data.name,
+                        email: data.email,
+                        image: imageUrl,
+                        termsAccepted: data.termsAndConditions === true,
+                        role: 'user',
+                        created_at: new Date().toISOString(),
+                        last_sign_in: new Date().toISOString()
+                    };
+
+                    return axiosSecure.post("/users", userInfo);
+                });
+            })
+            .then(() => {
+                Swal.fire({
+                    icon: "success",
+                    title: "Your account has been created successfully!",
+                    showConfirmButton: false,
+                    timer: 1500,
+                });
+
+                navigate(location.state ? location.state : "/");
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                let message = "Something went wrong. Please try again.";
+                if (errorCode === "auth/email-already-in-use") {
+                    message = "This email is already registered!";
+                }
+                Swal.fire({
+                title: message,
+                icon: "error",
+                draggable: true
+                });
             });
-
-            const result = await res.json();
-            const imageUrl = result.imageUrl;
-
-            await updateUserProfile({ displayName: data.name, photoURL: imageUrl});
-
-            await axiosSecure.post("/users", {
-                name: data.name,
-                email: data.email,
-                image: imageUrl,
-                termsAccepted: data.termsAndConditions === true
-            });
-
-            navigate(location.state ? location.state : "/");
-
-            Swal.fire({
-            icon: "success",
-            title: "Your account has been created successfully!",
-            showConfirmButton: false,
-            timer: 1500,
-            });
-        }
-        catch(error) {
-            const errorCode = error.code;
-            let message = "Something went wrong. Please try again.";
-            if (errorCode === "auth/email-already-in-use") {
-                message = "This email is already registered!";
-            }
-            Swal.fire({
-            title: message,
-            icon: "error",
-            draggable: true
-            });
-        }
+        });
     }
 
     useEffect(() => {
