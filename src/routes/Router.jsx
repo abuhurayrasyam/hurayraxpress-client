@@ -23,6 +23,8 @@ import PendingRiders from "../features/dashboard/admin/pages/PendingRiders";
 import ActiveRiders from "../features/dashboard/admin/pages/ActiveRiders";
 import DeactivatedRiders from "../features/dashboard/admin/pages/DeactivatedRiders";
 import MakeAdmin from "../features/dashboard/admin/pages/MakeAdmin";
+import AdminRoute from "./AdminRoute";
+import Forbidden from "../pages/Forbidden";
 
 export const router = createBrowserRouter([
   {
@@ -90,19 +92,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "pending-riders",
-        element: <PrivateRoute><PendingRiders></PendingRiders></PrivateRoute>
+        element: <AdminRoute><PendingRiders></PendingRiders></AdminRoute>
       },
       {
         path: "active-riders",
-        element: <PrivateRoute><ActiveRiders></ActiveRiders></PrivateRoute>
+        element: <AdminRoute><ActiveRiders></ActiveRiders></AdminRoute>
       },
       {
         path: "deactivated-riders",
-        element: <PrivateRoute><DeactivatedRiders></DeactivatedRiders></PrivateRoute>
+        element: <AdminRoute><DeactivatedRiders></DeactivatedRiders></AdminRoute>
       },
       {
         path: "make-admin",
-        element: <PrivateRoute><MakeAdmin></MakeAdmin></PrivateRoute>
+        element: <AdminRoute><MakeAdmin></MakeAdmin></AdminRoute>
       },
       {
         path: "payment/:parcelId",
@@ -117,5 +119,9 @@ export const router = createBrowserRouter([
         element: <PrivateRoute><UpdateYourProfile></UpdateYourProfile></PrivateRoute>
       }
     ]
-  }
+  },
+  {
+    path: "/forbidden",
+    Component: Forbidden
+  },
 ]);

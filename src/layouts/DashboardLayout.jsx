@@ -5,8 +5,11 @@ import { FaBoxOpen, FaHome, FaMoneyCheckAlt, FaMotorcycle, FaSearchLocation, FaU
 import { FiPackage } from 'react-icons/fi';
 import { MdPendingActions } from 'react-icons/md';
 import { BsPersonCheckFill } from 'react-icons/bs';
+import useUserRole from '../hooks/useUserRole';
 
 const DashboardLayout = () => {
+
+    const { role, roleLoading } = useUserRole();
 
     const navLinks = (
         <>
@@ -16,11 +19,16 @@ const DashboardLayout = () => {
             <NavLink to="/dashboard/my-payment-history" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaMoneyCheckAlt /> My Payment History</NavLink>
             <NavLink to="/dashboard/track-parcel" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaSearchLocation /> Track a Parcel</NavLink>
             <NavLink to="/dashboard/be-rider" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaMotorcycle /> Be A Rider</NavLink>
-            <NavLink to="/dashboard/pending-riders" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><MdPendingActions /> Pending Riders</NavLink>
-            <NavLink to="/dashboard/active-riders" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><BsPersonCheckFill /> Active Riders</NavLink>
-            <NavLink to="/dashboard/deactivated-riders" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaUserSlash /> Deactivated Riders</NavLink>
-            <NavLink to="/dashboard/make-admin" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaUserShield /> Make Admin</NavLink>
             <NavLink to="/dashboard/update-profile" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaUserEdit /> Update Your Profile</NavLink>
+            {
+                !roleLoading && role == "admin" && 
+                <>
+                    <NavLink to="/dashboard/pending-riders" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><MdPendingActions /> Pending Riders</NavLink>
+                    <NavLink to="/dashboard/active-riders" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><BsPersonCheckFill /> Active Riders</NavLink>
+                    <NavLink to="/dashboard/deactivated-riders" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaUserSlash /> Deactivated Riders</NavLink>
+                    <NavLink to="/dashboard/make-admin" className="flex text-sm md:text-xl items-center gap-2 text-white mb-2"><FaUserShield /> Make Admin</NavLink>
+                </>
+            }
         </>
     )
 
