@@ -25,6 +25,7 @@ import DeactivatedRiders from "../features/dashboard/admin/pages/DeactivatedRide
 import MakeAdmin from "../features/dashboard/admin/pages/MakeAdmin";
 import AdminRoute from "./AdminRoute";
 import Forbidden from "../pages/Forbidden";
+import AssignRider from "../features/dashboard/admin/pages/AssignRider";
 
 export const router = createBrowserRouter([
   {
@@ -101,6 +102,10 @@ export const router = createBrowserRouter([
       {
         path: "deactivated-riders",
         element: <AdminRoute><DeactivatedRiders></DeactivatedRiders></AdminRoute>
+      },
+      {
+        path: "assign-rider",
+        element: <AdminRoute><AssignRider></AssignRider></AdminRoute>
       },
       {
         path: "make-admin",
