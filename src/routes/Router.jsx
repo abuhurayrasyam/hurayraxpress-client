@@ -22,6 +22,7 @@ import BeARider from "../features/dashboard/raider/pages/BeARider";
 import PendingRiders from "../features/dashboard/admin/pages/PendingRiders";
 import ActiveRiders from "../features/dashboard/admin/pages/ActiveRiders";
 import DeactivatedRiders from "../features/dashboard/admin/pages/DeactivatedRiders";
+import MakeAdmin from "../features/dashboard/admin/pages/MakeAdmin";
 
 export const router = createBrowserRouter([
   {
@@ -98,6 +99,10 @@ export const router = createBrowserRouter([
       {
         path: "deactivated-riders",
         element: <PrivateRoute><DeactivatedRiders></DeactivatedRiders></PrivateRoute>
+      },
+      {
+        path: "make-admin",
+        element: <PrivateRoute><MakeAdmin></MakeAdmin></PrivateRoute>
       },
       {
         path: "payment/:parcelId",
